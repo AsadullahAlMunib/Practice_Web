@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS practice</title>
+    <style>
+        body {
+            background-color: rgb(255, 235, 250);
+            justify-items: center;
+        }
+        header{
+            height: 50px;
+            border-radius: 0 0 10px 10px;
+            width: 100%;
+            background-color: #fff;
+            border-bottom: 2px solid #000;
+            position: fixed;
+            top: 0px;
+        }
+        header div{
+            height: 0px;
+        }
+        header div img{
+            border-radius: 50%;
+            height: 40px;
+            padding: 5px;
+        }
+        header ul{
+            justify-self: center;
+        }
+        header ul li{
+            list-style: none;
+            float: left;
+            padding-left: 3px;
+            padding-right: 3px;
+            justify-content: space-between;
+        }
+        header ul li a{
+            text-decoration: none;
+            font-size: 12px;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Oxygen, sans-serif;
+            font-weight: bold;
+            color: rgb(135, 0, 254);
+            padding: 5px;
+            border-radius: 5px;
+            background-color: lightsteelblue;
+        }
+        header ul li a:focus{
+            font-size: 14px;
+            color: rgb(254, 0, 178);
+            border-bottom: 3px solid rgb(254, 0, 178);
+            background-color: lightskyblue;
+        }
+        header ul li a:hover{
+            font-size: 16px;
+            font-weight: bolder;
+            color: rgb(42, 0, 254);
+            background-color: lightblue;
+            cursor: pointer;
+        }
+
+        #Home{
+            height: 600px;
+            width: 98%;
+            justify-items: center;
+            background: linear-gradient(135deg, rgb(172, 172, 232), rgb(172, 232, 172), rgb(232, 172, 172));
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border-radius: 6px;
+            text-align: center;
+            margin-top: 80px;
+        }
+        #Home div h1{
+            padding-top: 200px;
+            text-transform: capitalize;
+            font-size: 34px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold; 
+        }
+        #Home div p{
+            text-transform: capitalize;
+            font-size: 17px;
+            font-family: cursive;
+            font-weight: 600;
+            font-style: italic;
+            padding-bottom: 90px;
+        }
+        h2{
+            text-transform: capitalize;
+            text-decoration: underline wavy navy;
+            font-size: 28px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;
+            padding-bottom: 10px;
+        }
+        .Social ul{
+            padding-right: 40px;
+        }
+        .Social ul li{
+            list-style: none;
+            text-decoration: none;
+            float: left;
+            padding: 1px;
+        }
+        .Social ul li a img{
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            padding: -1px;
+            background: #fff;
+        }
+        .Social ul li a img:hover{
+            zoom: 1.2;
+            padding: 1px;
+            cursor: pointer;
+            background: #fff;
+            border: 2px solid rgb(254, 0, 178);
+        }
+        .Social ul li a img:active{
+            cursor: wait;
+        }
+
+        #About{
+            width: 99%;
+            justify-items: center;
+            padding-top: 50px;
+            padding-bottom: 30px;
+        }
+        #About .img img{
+            border-radius: 10px;
+            padding: 3px;
+            height: 300px;
+            width: 300px;
+            background: linear-gradient(135deg, #ff3543, #4335ff);
+        }
+        #About .img img:hover{
+            zoom: 1.05;
+            rotate: -1deg;
+            cursor: zoom-in;
+            border-radius: 15px;
+        }
+        #About .info{
+            padding-top: 10px;
+            width: 90%;
+            text-align: center;
+            font-size: 15px;
+            font-family: serif;
+            font-weight: normal;
+            font-display: auto;
+        }
+        #About .info p:hover{
+            font-size: 17px;
+        }
+
+        #Skills{
+            width: 99%;
+            justify-items: center;
+            padding-top: 50px;
+            padding-bottom: 30px;
+        }
+        #Skills div{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        #Skills .title{
+            width: 100%;
+        }
+        #Skills .title div{
+            margin: auto;
+            width: 49%;
+        }
+        #Skills .title div h3{
+            font-size: 22px;
+            font-style: italic;
+            font-weight: 600;
+            font-family: cursive;
+        }
+        #Skills div .Skill{
+            text-align: center;
+            width: 50%;
+        }
+        #Skills div .Web{
+            text-align: center;
+            width: 50%;
+        }
+        #Skills div .Skill ul  li{
+            float: inline-end;
+        }
+        #Skills div .Web ul li{
+            float: inline-start;
+        }
+        #Skills div ul li{
+            list-style: none;
+            background: linear-gradient(210deg, gold, tomato, magenta);
+            padding: 8px;
+            border: 3px solid #5454fc;
+            border-radius: 50px;
+            margin: 3px;
+            color: #fff;
+            font-weight: bold;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #Skills div ul li:hover{
+            rotate: -3deg;
+            background: linear-gradient(135deg, #fb4040, #5454fc);
+            border-color: #3af33a;
+            cursor: default;
+        }
+
+        #Plan{
+            width: 99%;
+        }
+        #Plan table{
+            border: 4px solid #f0f;
+            width: 100%;
+            border-radius: 20px;
+        }
+        #Plan table td, th{
+            border: 1px solid tomato;
+            text-align: center;
+            height: 30px;
+            cursor: default;
+        }
+        #Plan table .FirstLine{
+            border-radius: 14px 14px 0 0;
+        }
+        #Plan table .LastLeft{
+            border-radius: 0 0 0 14px;
+        }
+        #Plan table .LastRight{
+            border-radius: 0 0 14px 0;
+        }
+        #Plan table tr td input:hover{
+            cursor: pointer;
+        }
+        #Plan .video{
+            margin-top: 20px;
+            padding: 10px;
+            border: 3px solid #6fdc76;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="https://avatars.githubusercontent.com/u/163411448?v=4" alt="Asadullah">
+        </div>
+        <ul>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Skills">Skills</a></li>
+            <li><a href="#Plan">Plan</a></li>
+            <li><a href="#Code">Code</a></li>
+            <li><a href="#Work">Work</a></li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
+    </header>
+    <nav id="Home">
+        <div>
+            <h1>Md Asadullah Al Munib</h1>
+            <p>Robotics Developer & Programmer</p>
+        </div>
+        <div class="Social">
+            <h2>Social Media</h2>
+            <ul>
+                <li><a href="https://github.com/AsadullahAlMunib" target="_blank"><img src="https://cdn-icons-png.flaticon.com/128/2111/2111432.png" alt="GitHub"></a></li>
+                <li><a href="https://facebook.com/AsadullahAlMunib" target="_blank"><img src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png" alt="Facebook Page"></a></li>
+                <li><a href="https://facebook.com/MdAsadullahAlMunib" target="_blank"><img src="https://cdn-icons-png.flaticon.com/128/5968/5968903.png" alt="Facebook ID"></a></li>
+                <li><a href="https://youtube.com/@AsadullahAlMunib" target="_blank"><img src="https://cdn-icons-png.flaticon.com/128/3670/3670147.png" alt="YouTube"></a></li>
+                <li><a href="https://www.instagram.com/asadullahalmunib" target="_blank"><img src="https://cdn-icons-png.flaticon.com/128/15707/15707749.png" alt="Instagram"></a></li>
+                <li><a href="https://www.linkedin.com/in/AsadullahAlMunib" target="_blank"><img src="https://cdn-icons-png.flaticon.com/128/4494/4494497.png" alt="LinkedIn"></a></li>
+                <li><a href="https://x.com/asadullah_munib" target="_blank"><img src="https://cdn-icons-png.flaticon.com/128/5969/5969020.png" alt="X"></a></li>
+                <li><a href="https://www.threads.net/@AsadullahAlMunib" target="_blank"><img src="https://cdn-icons-png.flaticon.com/128/12105/12105338.png" alt="Threads"></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <article id="About">
+        <h2>About Me</h2>
+        <div class="img">
+            <img src="https://avatars.githubusercontent.com/u/163411448?v=4" alt="Asadullah">
+        </div>
+        <div class="info">
+            <p>
+                I'm someone who's passionate about technology and programming. I'm always curious about how things work behind the scenes and how code can be used to bring ideas to life.
+            </p>
+            <p>
+                Even though I don't currently have a laptop or PC, I don't let that stop me. I actively learn and build web projects from my mobile device. This challenge has only made me more focused and creative in finding ways to continue learning and building.
+            </p>
+        </div>
+    </article>
+
+    <aside id="Skills">
+        <h2>My Skills</h2>
+        <div class="title">
+            <div><h3>Skills</h3></div>
+            <div><h3>To Create Website</h3></div>
+        </div>
+        <div>
+            <div class="Skill">
+                <ul>
+                    <li>Programming</li>
+                    <li>Radio Control (RC)</li>
+                    <li>C Language</li>
+                    <li>Robotics</li>
+                    <li>C++ (.ino)</li>
+                    <li>IoT</li>
+                    <li>Graphic Design</li>
+                    <li>Video Editing</li>
+                    <li>Arduino</li>
+                    <li>Technology</li>
+                    <li>Electronics</li>
+                    <li>Science</li>
+                    <li>Research</li>
+                </ul>
+            </div>
+            <div class="Web">
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Database</li>
+                    <li>PhP</li>
+                    <li>SQL</li>
+                    <li>Domain</li>
+                    <li>Hosting</li>
+                    <li>SSL Cirtificate</li>
+                    <li>Fremwork</li>
+                    <li>React</li>
+                    <li>Python</li>
+                    <li>API</li>
+                    <li>Plug In</li>
+                    <li>SEO</li>
+                    <li>Management</li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+    <article id="Plan">
+        <div>
+            <table>
+                <tr>
+                    <caption><h2>Plan for FPV Drone</h2></caption>
+                    <th colspan="5" class="FirstLine"><h3><i>Nessesary Equipments List</i></h3></th>
+                </tr>
+                <tr>
+                    <th>Sl.</th>
+                    <th>Component</th>
+                    <th>Quantity</th>
+                    <th>MRP (each)</th>
+                    <th>I Have?</th>
+                </tr>
+                <tr>
+                    <td>01</td>
+                    <td>FlySky i6X Transmitter</td>
+                    <td>1x</td>
+                    <td>৳5000</td>
+                    <td><input type="checkbox" name="Transmitter"></td>
+                </tr>
+                <tr>
+                    <td>02</td>
+                    <td>IA10B 10CH Receiver</td>
+                    <td>1x</td>
+                    <td>৳2000</td>
+                    <td><input type="checkbox" name="Receiver"></td>
+                </tr>
+                <tr>
+                    <td>03</td>
+                    <td>5" MARK4 Fream</td>
+                    <td>1x</td>
+                    <td>৳2950</td>
+                    <td><input type="checkbox" name="Fream"></td>
+                </tr>
+                <tr>
+                    <td>04</td>
+                    <td>iFlight XING-E Pro BLDC 2400kv</td>
+                    <td>4x</td>
+                    <td>৳2400</td>
+                    <td><input type="checkbox" name="Motor"></td>
+                </tr>
+                <tr>
+                    <td>05</td>
+                    <td>3-Blade 5" Propeller (CW+CCW)</td>
+                    <td>4x</td>
+                    <td>৳75</td>
+                    <td><input type="checkbox" name="Propeller"></td>
+                </tr>
+                <tr>
+                    <td>06</td>
+                    <td>4s LiPo Battery</td>
+                    <td>1x</td>
+                    <td>৳5000</td>
+                    <td><input type="checkbox" name="Battery"></td>
+                </tr>
+                <tr>
+                    <td>07</td>
+                    <td>SpeedyBee F405 V3 FC & ESC Stack</td>
+                    <td>1x</td>
+                    <td>৳9600</td>
+                    <td><input type="checkbox" name="FC&ESC_Stack"></td>
+                </tr>
+                <tr>
+                    <th colspan="3" class="LastLeft">Total</th>
+                    <th colspan="2" class="LastRight">৳34450</th>
+                </tr>
+            </table>
+            <div class="video">
+                <video controls height="240px" width="100%">
+                    <source src="Video/𝗜 𝗕𝘂𝗶𝗹𝗱 𝗠𝘆 𝗙𝗶𝗿𝘀𝘁 𝗘𝘃𝗲𝗿 𝗙𝗣𝗩 𝗗𝗿𝗼𝗻𝗲 (𝑨𝒔𝒔𝒆𝒎𝒃𝒍𝒆 + 𝑻𝒆𝒔𝒕 𝑭𝒍𝒊𝒈𝒉𝒕).mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </article>
+</body>
+
+</html>
