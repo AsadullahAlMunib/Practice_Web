@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All equations</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            border: 0px solid #f00;
+        }
+        body {
+            padding: 0;
+            margin: 0;
+            max-width: 100%;
+            min-height: 100vh;
+            background: url('https://plus.unsplash.com/premium_photo-1673697239909-e11521d1ba94?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8RXZlbmluZ3xlbnwwfHwwfHx8MA%3D%3D');
+            background-repeat: no-repeat;
+            background-size: cover;
+            align-content: center;
+            justify-items: center;
+        }
+        .calculate {
+            max-width: 720px;
+            min-height: 500px;
+            padding: 10px;
+            border-radius: 20px;
+            background-color: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            justify-items: center;
+            align-content: center;
+            box-shadow: 0px 0px 15px 1px #fff;
+        }
+
+        .input {
+            padding: 20px 10px;
+            margin: 20px 5px;
+            width: 100%;
+            text-align: center;
+        }
+        .input .number {
+            display: flex;
+        }
+        .input .number input {
+            padding: 15px 20px;
+            margin: 10px 5px;
+            width: 50%;
+            border-radius: 15px;
+            font-size: 18px;
+            box-shadow: 0px 0px 15px -5px #00f;
+        }
+        .input button {
+            padding: 15px;
+            margin: 15px 0px 0px 0px;
+            width: 35%;
+            border: 2px groove #0f0;
+            border-radius: 50px;
+            background: linear-gradient(135deg, #fc00ff, #00dbde);
+            font-size: 24px;
+            color: #fff;
+            font-weight: bold;
+            box-shadow: 0px 0px 15px -5px #00f;
+        }
+        .input button img {
+            height: 25px;
+            float: right;
+        }
+        .input button:hover img {
+            transform: skew(145deg);
+        }
+        .input button:active img {
+            transform: rotateZ(45deg);
+        }
+        .input button:focus img {
+            transform: rotate(90deg);
+        }
+
+        .output {
+            padding: 20px 5px;
+            margin: 20px 5px;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+        .output div {
+            width: 125px;
+            margin: 5px;
+            padding: 2px;
+            text-align: center;
+            border-radius: 15px;
+            font-family: Monospace;
+            font-weight: bold;
+            background: linear-gradient(135deg, #ec87ec, #87b3ec);
+            box-shadow: 0px 0px 15px -5px #00f;
+        }
+
+
+        @media only screen and (max-width: 720px) {
+            .calculate {
+                max-width: 333px;
+                min-height: 600px;
+                padding: 5px;
+            }
+            .input {
+                padding: 10px 5px;
+                margin: 5px 2px;
+            }
+            .input .number {
+                display: block;
+            }
+            .input .number input {
+                margin: 5px 3px;
+                width: 290px;
+                font-size: 16px;l
+            }
+            .input button {
+                width: 50%;
+                font-size: 20px;
+            }
+            .output {
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+            .output div {
+                width: 32%;
+                margin: 2px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="calculate">
+        <div class="input">
+            <div class="number">
+                <input type="number" id="num1" placeholder="First Number">
+                <input type="number" id="num2" placeholder="Second Number">
+            </div>
+            <button onclick="calculate()">Calculate <img src="https://cdn-icons-png.flaticon.com/128/10746/10746538.png"></button>
+        </div>
+        <div class="output">
+            <div>
+                <h3>SUMMATION</h3>
+                <p id="summation">
+                </p>
+            </div>
+            <div>
+                <h3>SUBTRACT</h3>
+                <p id="subtract">
+                </p>
+            </div>
+            <div>
+                <h3>MULTIPLY</h3>
+                <p id="multiply">
+                </p>
+            </div>
+            <div>
+                <h3>DIVIDE</h3>
+                <p id="divide">
+                </p>
+            </div>
+            <div>
+                <h3>REMAINDER</h3>
+                <p id="remainder">
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function calculate() {
+            let a = parseFloat(document.getElementById("num1").value);
+            let b = parseFloat(document.getElementById("num2").value);
+
+            let summation_result = a+b;
+            document.getElementById("summation").innerText = summation_result;
+
+            let subtract_result = a-b;
+            document.getElementById("subtract").innerText = subtract_result;
+
+            let multiply_result = a*b;
+            document.getElementById("multiply").innerText = multiply_result;
+
+            let divide_result,
+            remainder_result;
+            if (b != 0) {
+                divide_result = a/b;
+                remainder_result = a%b;
+                document.getElementById("divide").innerText = parseInt(divide_result);
+            } else {
+                divide_result = 'Infinity';
+                remainder_result = 'Error!';
+                document.getElementById("divide").innerText = divide_result;
+            }
+            document.getElementById("remainder").innerText = remainder_result;
+        }
+    </script>
+</body>
+</html>
