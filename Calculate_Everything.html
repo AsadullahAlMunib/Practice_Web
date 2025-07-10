@@ -111,7 +111,8 @@
             .input .number input {
                 margin: 5px 3px;
                 width: 290px;
-                font-size: 16px;l
+                font-size: 16px;
+                l
             }
             .input button {
                 width: 50%;
@@ -122,7 +123,7 @@
                 justify-content: space-around;
             }
             .output div {
-                width: 32%;
+                width: 30%;
                 margin: 2px;
                 font-size: 12px;
             }
@@ -133,10 +134,10 @@
     <div class="calculate">
         <div class="input">
             <div class="number">
-                <input type="number" id="num1" placeholder="First Number">
-                <input type="number" id="num2" placeholder="Second Number">
+                <input type="number" id="num1" placeholder="First Number" oninput="check()">
+                <input type="number" id="num2" placeholder="Second Number" oninput="check()">
             </div>
-            <button onclick="calculate()">Calculate <img src="https://cdn-icons-png.flaticon.com/128/10746/10746538.png"></button>
+            <button onclick="calculate()" disabled>Calculate <img src="https://cdn-icons-png.flaticon.com/128/10746/10746538.png"></button>
         </div>
         <div class="output">
             <div>
@@ -167,6 +168,18 @@
         </div>
     </div>
     <script>
+        function check() {
+            let a = parseFloat(document.getElementById("num1").value);
+            let b = parseFloat(document.getElementById("num2").value);
+            let btn = document.querySelector("button");
+            
+            if(isNaN(a) || isNaN(b)) {
+                btn.disabled = true;
+            }
+            else {
+                btn.disabled = false;
+            }
+        }
         function calculate() {
             let a = parseFloat(document.getElementById("num1").value);
             let b = parseFloat(document.getElementById("num2").value);
