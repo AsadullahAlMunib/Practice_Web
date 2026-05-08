@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong Game - Classic Arcade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-wrapper">
+            <!-- Game Header -->
+            <h1 class="game-title">🎮 PONG GAME 🎮</h1>
+
+            <!-- Scoreboard -->
+            <div class="scoreboard">
+                <div class="score-section player">
+                    <h2 class="score-label">YOU</h2>
+                    <div class="score" id="playerScore">0</div>
+                </div>
+
+                <div class="vs-section">VS</div>
+
+                <div class="score-section computer">
+                    <h2 class="score-label">COMPUTER</h2>
+                    <div class="score" id="computerScore">0</div>
+                </div>
+            </div>
+
+            <!-- Canvas -->
+            <canvas id="gameCanvas" width="800" height="400"></canvas>
+
+            <!-- Game Status -->
+            <div class="game-status" id="gameStatus"></div>
+
+            <!-- Controls Info -->
+            <div class="controls-info">
+                <div class="control-item">
+                    <span class="control-key">↑ ↓</span>
+                    <span class="control-text">Move Paddle</span>
+                </div>
+                <div class="control-item">
+                    <span class="control-key">MOUSE</span>
+                    <span class="control-text">Alternative Control</span>
+                </div>
+            </div>
+
+            <!-- Reset Button -->
+            <button class="reset-btn" onclick="resetGame()">🔄 New Game</button>
+
+            <!-- Instructions -->
+            <div class="instructions">
+                <h3>How to Play:</h3>
+                <ul>
+                    <li>Use <strong>Arrow Keys</strong> or <strong>Mouse</strong> to control the left paddle (GREEN)</li>
+                    <li>The computer controls the right paddle (RED)</li>
+                    <li>Hit the ball back and forth to score points</li>
+                    <li>First player to 5 points wins!</li>
+                    <li>The ball gets faster with each paddle hit</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
